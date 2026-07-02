@@ -58,7 +58,7 @@ volumes:
 Если этот проект сэкономил ваши токены, ресурсы процессора и время, вы можете поддержать автора.
 
 <p align="left">
-  <a href=".github/FUNDING.yml">
+  <a href="FUNDING.yml">
     <img src="https://img.shields.io/badge/Поддержать_проект-ea4aaa?style=for-the-badge&logo=github-sponsors&logoColor=white" alt="Sponsor Badge"/>
   </a>
 </p>
