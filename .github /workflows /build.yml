@@ -1,1 +1,41 @@
+name: Build Zabbix Proxy ARMv7
 
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and export to tar
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/arm/v7
+          push: false
+          tags: zabbix-proxy:7.0-armv7
+         outputs: type=docker,dest=/tmp/zabbix-proxy-armv7.tar
+          build-args: |
+            ZABBIX_VERSION=7.0.27
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zabbix-proxy-armv7
+          path: /tmp/zabbix-proxy-armv7.tar
+          retention-days: 7
