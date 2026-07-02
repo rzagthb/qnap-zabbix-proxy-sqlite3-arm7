@@ -65,3 +65,5 @@ volumes:
 
 > [!NOTE]
 > Вы также можете воспользоваться стандартной кнопкой **«Sponsor»** в правом сайдбаре на главной странице этого репозитория.
+
+![](https://img.shields.io/badge/Development-Vibecoded-ff69b4?style=flat-square&logo=visual-studio-code&logoColor=white)
