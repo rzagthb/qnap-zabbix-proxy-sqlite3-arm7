@@ -65,3 +65,5 @@ If this project saved your tokens, CPU resources, and time, please consider supp
 
 > [!NOTE]
 > You can also use the native **"Sponsor"** button located in the right sidebar of this GitHub repository page.
+
+![](https://img.shields.io/badge/Development-Vibecoded-ff69b4?style=flat-square&logo=visual-studio-code&logoColor=white)
